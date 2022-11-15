@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>animated webdesign</title>
+</head>
+<body>
+    <div class="container">
+       <header>
+           <div class="logo">
+             <a href="">mamon<span>dots</span></a>
+           </div>
+           <div class="menu">
+             <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">protfolio</a></li>
+                <li><a href="">testimonial</a></li>
+                <li><a href="">blog</a></li>
+             </ul>
+           </div>
+           <div class="btn">
+             <a href="">get started</a>
+           </div>
+       </header>
+       <div class="content">
+           <div class="information">
+              <h4>Hello ! I am</h4>
+              <h1>Richard Miles</h1>
+              <h3>Professional freelancer & Web Designer</h3>
+              <p>
+               Product Desihner who crafts beautiful, minimal and usable interfaces. I spend <br>
+               most pf my time understanding human computer interactions.<br>
+               leading the design Team at <span>Themesdesign.in</span>
+              </p>
+              <div class="signature">
+                 <img src="img/signature.png">
+              </div>
+              <div class="clickbtn">
+                <button class="puseBtn"><i class="fa-solid fa-play"></i></button>
+                <p>watch video</p>
+              </div>
+              <div class="social-icon">
+               <i class="fa-brands fa-facebook"></i>
+               <i class="fa-brands fa-instagram"></i>
+               <i class="fa-brands fa-twitter"></i>
+               <i class="fa-brands fa-linkedin"></i>
+              </div>
+           </div>
+           <div class="bgColor"></div>
+           <div class="hero-img">
+             <img src="img/bg.png">
+           </div>
+           <div class="videoPage">
+              <div class="videoBox">
+                 <video src="video/pexels-alena-darmel-7730018.mp4" controls></video>
+              </div>
+              <div class="closeBtn"><i class="fa-solid fa-xmark"></i></div>
+           </div>
+       </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+       const puseBtn = document.querySelector('.puseBtn');
+       const videoPage = document.querySelector('.videoPage');
+       const closeBtn = document.querySelector('.closeBtn');
+
+       puseBtn.addEventListener('click',()=>{
+         videoPage.classList.add('active');
+       });
+
+       closeBtn.addEventListener('click',()=>{
+         videoPage.classList.remove('active');
+       });
+
+       let animation = anime({
+         targets:'header',
+         translateY:[-80,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+       });
+
+       anime({
+         targets:'.information h4',
+         translateX:[40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:300,
+       });
+
+       anime({
+         targets:'.information h1',
+         translateX:[40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:500,
+       });
+
+       anime({
+         targets:'.information h3',
+         translateX:[40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:700,
+       });
+
+       anime({
+         targets:'.information p',
+         translateX:[40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:900,
+       });
+
+       anime({
+         targets:'.signature',
+         translateX:[-40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:900,
+       });
+
+       anime({
+         targets:'.clickbtn',
+         translateX:[40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:1000,
+       });
+
+       anime({
+         targets:'.bgColor',
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:1200,
+       });
+
+       anime({
+         targets:'.hero-img',
+         translateX:[80,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:1400,
+       });
+
+       anime({
+         targets:'.social-icon',
+         translateX:[-40,0],
+         opacity:[0,1],
+         duration:800,
+         easing:'easeInOutSine',
+         delay:1600,
+       });
+
+    </script>
+</body>
+</html>
